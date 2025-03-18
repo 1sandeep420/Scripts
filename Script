@@ -1,0 +1,46 @@
+
+# ssh Ubuntu@13.127.82.86    access through the ip address provided 
+# ssh -i    C:\Users\Lenovo\Downloads\Test_1.pem ubuntu@13.127.82.86   address of the pem file stored in device 
+# ls -la :- shows the files in the instance
+# vi [FILENAME] : opens the file
+# cat/etc/orelease   -  shows the system info 
+# current directory : - PWD  [present working directory]
+# Change the directory : - CD  [change directory] [directory or file name]
+# Going back to the directory  : - cd -   or cd ..   or cd ../..  
+# Detailed info including timestamp  : - ls -ltr , if it is starting with D it is a directory or if it is a R it is a file
+# create a file : - touch [file name]
+# Creating a file and writing inside it  : - vi [file name]   wrire in the file use i  and to save the file :wq!  using cat [filename]  it prints the content in the file  :q is quit 
+# Remove the directory :- rm -r [filename]   
+# shows the memory data : - free
+# number of cpu  : - nproc
+# disc size : -df -h
+# every info at one place : - top
+# man [command name ex :- ls , ls -ltr , touch]: - Detail info about the command like Help
+# ls -ltr  : returns the files folders along with timestamp 
+# mkdir  :  [Directory name]
+# nproc  : Number of CPU
+
+# #!/bin/bash  are the excecutables like a python interpretor , node.js , which inteepretes the bash commands ,   
+
+# #!/bin/sh and #!/bin/bash are primerly same but due to linking process #!/bin/sh is defaulty pointed to #!/bin/bash 
+
+# echo "Hi iam echo" 
+# ______________________________________________________________________
+# BASH 
+# sh  or else ./ [file name ]  running file
+# give permisioon using  : - chmod  777
+# # considers as command and avoids excecute 
+
+
+# -----------------------------------------------------------------------Creating the instances and buckets using aws CLI----------------------------------------------
+
+# AWS command line installation :- 
+
+# 1] install the package from aws console 
+# 2] cmd >> aws version [checking the aws version]
+# 3]Authoticating with the aws using security credentials 
+# 4] aws configure 
+# 5] enter the Id , Key , zone , json
+# 4] aws s3 ls shows the buckets  (ls-list)
+# 5] To create a bucket : - aws s3 mb s3://sandeep-7569785090      {mb - make bucket}
+# 4] List of ec2 running : - aws ec2 describe-instances --query "Reservations[*].Instances[*].{ID:InstanceId,State:State.Name,Type:InstanceType,IP:PublicIpAddress}"
